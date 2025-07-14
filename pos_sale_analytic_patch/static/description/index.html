@@ -49,6 +49,13 @@
             border-top: 1px solid #eee;
             padding-top: 18px;
         }
+        .dependency {
+            background: #fffbe7;
+            border-left: 4px solid #ffd600;
+            padding: 14px 18px;
+            margin: 24px 0;
+            font-size: 1.08em;
+        }
     </style>
 </head>
 <body>
@@ -57,8 +64,7 @@
         <p>
             <strong>Version:</strong> Odoo 15<br>
             <strong>Author:</strong> Esteban Viniegra<br>
-            <strong>Company:</strong> Pridecta | <a href="https://pridecta.es">Website</a><br>
-
+            <strong>Company:</strong> Pridecta<br>
         </p>
         <p>
             This module guarantees that analytic accounts assigned to POS orders are stored and visible in the <strong>standard sales report</strong> (<code>sale.report</code>).
@@ -87,6 +93,16 @@
             <li>The module overrides some behavior on POS order line creation and <code>sale.report</code> view patching. It is designed to be as compatible as possible with customizations and other modules.</li>
             <li>For advanced technical details, see the code and comments in the <code>models</code> directory.</li>
         </ul>
+
+        <div class="dependency">
+            <strong>Dependencies:</strong><br>
+            This module requires the <code>pos_sale_analytic</code> module from the Odoo Community Association (OCA).
+            <br>
+            <small>
+                You can find it at: 
+                <a href="https://github.com/OCA/pos/tree/15.0/pos_sale_analytic" target="_blank">https://github.com/OCA/pos/tree/15.0/pos_sale_analytic</a>
+            </small>
+        </div>
 
         <div class="footer">
             &copy; 2025 Esteban Viniegra. This module is not an official Odoo S.A. product.
