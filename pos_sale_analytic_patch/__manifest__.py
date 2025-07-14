@@ -8,6 +8,9 @@
     'depends': ['sale','pos_analytic_by_config'],
     'data': [],
     'icon': 'pos_sale_analytic_patch/static/description/icon.png',
+    'images': [
+        'static/description/cover.png',
+    ],
     'installable': True,
     'auto_install': False,
 }
