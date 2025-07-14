@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POS Analytic Account Auto – Odoo Module</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 40px 50px 40px 50px;
+        }
+        h1 {
+            color: #1464a5;
+            font-size: 2.4em;
+            margin-top: 0;
+        }
+        h2 {
+            color: #29547a;
+            margin-top: 1.8em;
+        }
+        ul, ol {
+            margin-left: 2em;
+        }
+        code, pre {
+            background: #f1f4f8;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #0a5486;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e1e4e8;
+            margin: 2em 0;
+        }
+        .footer {
+            color: #999;
+            font-size: 0.95em;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>POS Analytic Account Auto</h1>
+        <p>
+            <strong>Version:</strong> Odoo 15<br>
+            <strong>Author:</strong> Esteban Viniegra<br>
+            <strong>Company:</strong> Pridecta | <a href="https://pridecta.es">Website</a><br>
+
+        </p>
+        <p>
+            This module guarantees that analytic accounts assigned to POS orders are stored and visible in the <strong>standard sales report</strong> (<code>sale.report</code>).
+            It ensures the analytic account is filled on every POS order line and patches the sales report SQL view to persist this field even after upgrades or module reinstalls.
+        </p>
+
+        <hr>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Adds the <code>analytic_account_id</code> field to <code>pos.order.line</code> (POS order lines).</li>
+            <li>Automatically computes and stores the analytic account on POS order lines, using the POS configuration of the session.</li>
+            <li><strong>Patches the <code>sale.report</code> SQL view</strong> so that analytic account data for POS orders is visible and usable in all native sales analysis features, dashboards, and exports.</li>
+            <li>Ensures that this patch persists even after upgrades or module reinstalls.</li>
+        </ul>
+
+        <h2>Usage</h2>
+        <ol>
+            <li>Install the module in your Odoo 15 environment.</li>
+            <li>Create or validate POS orders as usual.</li>
+            <li>Analytic account information will be automatically included in all POS order lines and will be available in the standard sales analysis views and exports.</li>
+        </ol>
+
+        <h2>Technical Notes</h2>
+        <ul>
+            <li>The module overrides some behavior on POS order line creation and <code>sale.report</code> view patching. It is designed to be as compatible as possible with customizations and other modules.</li>
+            <li>For advanced technical details, see the code and comments in the <code>models</code> directory.</li>
+        </ul>
+
+        <div class="footer">
+            &copy; 2025 Esteban Viniegra. This module is not an official Odoo S.A. product.
+        </div>
+    </div>
+</body>
+</html>

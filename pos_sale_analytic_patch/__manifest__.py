@@ -7,7 +7,7 @@
     'website': 'https://pridecta.es',
     'depends': ['sale','pos_analytic_by_config'],
     'data': [],
-    'icon': 'pos_sale_analytic_patch/static/description/logo.png',
+    'icon': 'pos_sale_analytic_patch/static/description/icon.png',
     'installable': True,
     'auto_install': False,
 }
