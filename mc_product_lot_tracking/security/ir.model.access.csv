@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_lot_tracking_company_user,access.product.lot.tracking.company.user,model_product_lot_tracking_company,base.group_user,1,1,1,1
+access_product_lot_tracking_company_manager,access.product.lot.tracking.company.manager,model_product_lot_tracking_company,stock.group_stock_manager,1,1,1,1
+access_product_lot_tracking_company_admin,access.product.lot.tracking.company.admin,model_product_lot_tracking_company,base.group_system,1,1,1,1
