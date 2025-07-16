@@ -4,7 +4,7 @@
     "author": "Esteban Viniegra Pérez Olagaray | Pridecta",
     "category": "Inventory",
     "license": "AGPL-3",
-    "website": "https://pridecta.com",
+    "website": "https://pridecta.es",
     "summary": "Allows defining lot tracking at the company level.",
     "description": "Configure the tracking type (lot/serial/no tracking) per product and company.",
     "depends": [
