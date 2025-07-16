@@ -1,0 +1,72 @@
+# mc_product_lot_tracking - Spanish translations
+msgid ""
+msgstr ""
+"Project-Id-Version: mc_product_lot_tracking 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-16 00:00+0000\n"
+"PO-Revision-Date: 2024-07-16 00:00+0000\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: mc_product_lot_tracking
+#: model:ir.model,name:mc_product_lot_tracking.model_product_lot_tracking_company
+msgid "Product Lot Tracking by Company"
+msgstr "Seguimiento de Lote por Compañía"
+
+#. module: mc_product_lot_tracking
+#: model:ir.model.fields,field_description:mc_product_lot_tracking.field_product_lot_tracking_company__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: mc_product_lot_tracking
+#: model:ir.model.fields,field_description:mc_product_lot_tracking.field_product_lot_tracking_company__tracking
+msgid "Tracking"
+msgstr "Seguimiento"
+
+#. module: mc_product_lot_tracking
+#: model:ir.model.fields.selection,name:mc_product_lot_tracking.selection__product_lot_tracking_company__tracking__none
+msgid "No Tracking"
+msgstr "Sin Seguimiento"
+
+#. module: mc_product_lot_tracking
+#: model:ir.model.fields.selection,name:mc_product_lot_tracking.selection__product_lot_tracking_company__tracking__lot
+msgid "By Lot"
+msgstr "Por Lote"
+
+#. module: mc_product_lot_tracking
+#: model:ir.model.fields.selection,name:mc_product_lot_tracking.selection__product_lot_tracking_company__tracking__serial
+msgid "By Serial"
+msgstr "Por Serie"
+
+#. module: mc_product_lot_tracking
+#: model:ir.model.fields,field_description:mc_product_lot_tracking.field_product_template__tracking_company_ids
+msgid "Tracking by Company"
+msgstr "Seguimiento por Compañía"
+
+#. module: mc_product_lot_tracking
+#: sql_constraint:mc_product_lot_tracking.product_lot_tracking_company:0
+msgid "A configuration for this product and company already exists!"
+msgstr "¡Ya existe una configuración para este producto y compañía!"
+
+#. module: mc_product_lot_tracking
+#: code:addons/mc_product_lot_tracking/models/product_template.py:18
+#, python-format
+msgid "You must enter the serial number for product '%s' in company '%s'."
+msgstr "Debe ingresar el número de serie para el producto '%s' en la compañía '%s'."
+
+#. module: mc_product_lot_tracking
+#: code:addons/mc_product_lot_tracking/models/product_template.py:22
+#, python-format
+msgid "You must enter the lot number for product '%s' in company '%s'."
+msgstr "Debe ingresar el número de lote para el producto '%s' en la compañía '%s'."
+
+#. module: mc_product_lot_tracking
+#: label:product.template,view:view_product_template_form_inherit_lot_company
+msgid "Tracking by Company"
+msgstr "Seguimiento por Compañía"
+
+#. module: mc_product_lot_tracking
+#: group:tracking_company_group
+msgid "Tracking by Company"
+msgstr "Seguimiento por compañía"
