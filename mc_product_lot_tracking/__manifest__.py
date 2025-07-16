@@ -3,7 +3,7 @@
     "version": "18.0.1.0.0",
     "author": "Esteban Viniegra Pérez Olagaray | Pridecta",
     "category": "Inventory",
-    "license": "OEEL-1",
+    "license": "AGPL-3",
     "website": "https://pridecta.com",
     "summary": "Allows defining lot tracking at the company level.",
     "description": "Configure the tracking type (lot/serial/no tracking) per product and company.",
