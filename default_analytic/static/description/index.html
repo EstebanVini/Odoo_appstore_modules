@@ -1,0 +1,115 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <img class="logo" src="logo.png" alt="Pridecta logo" style="max-width:500px; height:auto; display:block;"/>
+            <h2 class="oe_slogan">User & Company Default Analytic Account</h2>
+            <h3 class="oe_slogan">Automate Analytic Distribution in Odoo 18</h3>
+            <div>Author: Esteban Viniegra Pérez Olagaray – <a href="mailto:esteban@eviniegra.software">esteban@eviniegra.software</a></div>
+            <div>For Odoo 18 Community & Enterprise</div>
+            <div class="text-center">
+                <p class="oe_mt32">
+                    Streamline your accounting workflow by automatically assigning analytic accounts to invoice lines based on User or Company defaults. Includes a powerful mass-update feature directly on the invoice.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Key Features</h3>
+            <div class="oe_span6">
+                <ul>
+                    <li><strong>User-Level Defaults:</strong> Assign a specific analytic account to each user (e.g., for salespeople or department heads).</li>
+                    <li><strong>Company-Level Defaults:</strong> Set a fallback analytic account for the entire company.</li>
+                    <li><strong>Smart Priority Logic:</strong> The system automatically selects the best account based on a hierarchy: <em>Invoice Header > Company > User</em>.</li>
+                </ul>
+            </div>
+            <div class="oe_span6">
+                <ul>
+                    <li><strong>Mass Update Tool:</strong> Use the "General Analytic Account" field on the invoice header to force a specific account onto all lines instantly.</li>
+                    <li><strong>Fallback Mechanism:</strong> If you remove the General Account, lines automatically revert to their default Company or User settings.</li>
+                    <li><strong>Odoo 18 Ready:</strong> Fully compatible with the new JSON-based <code>analytic_distribution</code> field.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Configuration</h3>
+        </div>
+        
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <h4>1. User Configuration</h4>
+                <p>Go to <strong>Settings &gt; Users & Companies &gt; Users</strong>.</p>
+                <p>Open a user, go to the <strong>Access Rights</strong> tab, and find the <strong>Multi Companies</strong> section.</p>
+                <br/>
+                
+                <div style="border: 1px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5px; overflow: hidden;">
+                    <img src="user_config.png" style="max-width: 100%; display: block;">
+                    <div style="padding: 10px; background-color: #f9f9f9; border-top: 1px solid #eee;">
+                        <p class="text-muted" style="margin: 0;"><em>Define the specific analytic account for this user.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <h4>2. Company Configuration</h4>
+                <p>Go to <strong>Settings &gt; Users & Companies &gt; Companies</strong>.</p>
+                <p>Open your company form. Check the <strong>General Information</strong> tab.</p>
+                <br/>
+                
+                <div style="border: 1px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5px; overflow: hidden;">
+                    <img src="company_config.png" style="max-width: 100%; display: block;">
+                    <div style="padding: 10px; background-color: #f9f9f9; border-top: 1px solid #eee;">
+                        <p class="text-muted" style="margin: 0;"><em>Set a fallback account if the user doesn't have one.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>   
+        
+    </div>
+</section>
+
+<section class="oe_container oe_dark" style="margin-top:20px;"></section>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Usage Workflow</h3>
+            <p class="oe_mt32">
+                When creating an invoice, the system auto-fills the analytic distribution. You can also override everything using the header field.
+            </p>
+            <div class="oe_row_img oe_centered" style="text-align: center;">
+                <img src="invoice_usage.png" class="img-thumbnail" style="max-width: 80%; margin: 20px auto; border: 1px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+            </div>
+            <div class="oe_span12">
+                <ol>
+                    <li><strong>Automatic Assignment:</strong> As you add invoice lines, the system checks if a "General Analytic Account" is set on the header. If not, it checks the Company default, then the User default.</li>
+                    <li><strong>Mass Editing:</strong> Select an account in the <strong>"General Analytic Account"</strong> field (in the invoice header). All existing lines will be updated immediately.</li>
+                    <li><strong>Resetting:</strong> Clear the "General Analytic Account" field to restore the lines to their original defaults (Company or User based).</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h3 class="oe_slogan">Credits</h3>
+            <div class="oe_span12 text-center">
+                <p>Developed by <strong>Pridecta</strong> for Odoo 18.</p>
+            </div>
+        </div>
+    </div>
+</section>

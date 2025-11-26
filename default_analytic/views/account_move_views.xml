@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_inherit_general_analytic" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.general.analytic</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//group[@id='header_right_group']" position="inside">
+                <field name="general_analytic_account_id" 
+                       placeholder="Override Analytic Account for All Lines"
+                       options="{'no_create': True}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']" position="attributes">
+                <attribute name="context">{'default_display_type': 'product', 'default_general_analytic_account_id': general_analytic_account_id}</attribute>
+            </xpath>
+            
+            <xpath expr="//field[@name='line_ids']" position="attributes">
+                <attribute name="context">{'default_display_type': 'product', 'default_general_analytic_account_id': general_analytic_account_id}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

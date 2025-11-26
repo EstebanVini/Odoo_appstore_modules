@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* user_default_analytic_by_pridecta
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-26 00:00+0000\n"
+"PO-Revision-Date: 2024-11-26 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model,name:user_default_analytic_by_pridecta.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model,name:user_default_analytic_by_pridecta.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model,name:user_default_analytic_by_pridecta.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model,name:user_default_analytic_by_pridecta.model_res_users
+msgid "User"
+msgstr "Usuario"
+
+# -------------------------------------------------------------------------
+# FIELDS TRANSLATIONS
+# -------------------------------------------------------------------------
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model.fields,field_description:user_default_analytic_by_pridecta.field_res_users__default_analytic_account_id
+#: model:ir.model.fields,field_description:user_default_analytic_by_pridecta.field_res_company__analytic_account_default_id
+msgid "Default Analytic Account"
+msgstr "Cuenta Analítica por Defecto"
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model.fields,help:user_default_analytic_by_pridecta.field_res_users__default_analytic_account_id
+msgid "This account will be automatically assigned to invoice lines created by this user."
+msgstr "Esta cuenta se asignará automáticamente a las líneas de factura creadas por este usuario."
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model.fields,help:user_default_analytic_by_pridecta.field_res_company__analytic_account_default_id
+msgid "This account takes precedence over the user's configuration."
+msgstr "Esta cuenta tiene prioridad sobre la configuración del usuario."
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model.fields,field_description:user_default_analytic_by_pridecta.field_account_move__general_analytic_account_id
+msgid "General Analytic Account"
+msgstr "Cuenta Analítica General"
+
+#. module: user_default_analytic_by_pridecta
+#: model:ir.model.fields,help:user_default_analytic_by_pridecta.field_account_move__general_analytic_account_id
+msgid "If you select an account here, it will be assigned to all lines. If you remove it, the default values (Company or User) will be restored."
+msgstr "Si selecciona una cuenta aquí, se asignará a todas las líneas. Si la elimina, se restaurarán los valores por defecto (Empresa o Usuario)."
+
+# -------------------------------------------------------------------------
+# XML VIEW PLACEHOLDERS
+# -------------------------------------------------------------------------
+
+#. module: user_default_analytic_by_pridecta
+#. odoo-xml
+#: code:addons/user_default_analytic_by_pridecta/views/res_users_views.xml:0
+msgid "Set Default Analytic Account for User Invoices"
+msgstr "Establecer cuenta analítica por defecto para el usuario"
+
+#. module: user_default_analytic_by_pridecta
+#. odoo-xml
+#: code:addons/user_default_analytic_by_pridecta/views/res_company_views.xml:0
+msgid "Default Analytic Account for Invoices"
+msgstr "Cuenta analítica por defecto para facturas"
+
+#. module: user_default_analytic_by_pridecta
+#. odoo-xml
+#: code:addons/user_default_analytic_by_pridecta/views/account_move_views.xml:0
+msgid "Override Analytic Account for All Lines"
+msgstr "Sobrescribir cuenta analítica en todas las líneas"

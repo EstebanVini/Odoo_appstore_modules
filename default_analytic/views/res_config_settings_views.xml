@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_analytic_default" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.analytic.default</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='group_analytic_accounting']" position="after">
+                <div class="row mt16" invisible="not group_analytic_accounting">
+                    <label for="company_analytic_account_default_id" class="col-lg-3 o_light_label"/>
+                    <field name="company_analytic_account_default_id"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
