@@ -1,6 +1,6 @@
 {
     'name': 'default_analytic',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.0.1',
     'summary': 'Set default analytic accounts for users and companies',
     'author': 'Esteban Viniegra | Pridecta',
     'website': 'https://pridecta.es',
