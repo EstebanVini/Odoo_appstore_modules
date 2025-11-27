@@ -12,6 +12,9 @@
             'views/res_company_views.xml',
             'views/account_move_views.xml',
         ],
+    "images": [
+        "static/description/cover.png",
+    ],
     'application': True,
     'installable': True,
     'icon': '/default_analytic/static/description/icon.png',
