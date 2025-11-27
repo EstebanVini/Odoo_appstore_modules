@@ -1,266 +1,113 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Analytic Defaults - Pridecta</title>
-  <style>
-    :root{
-      --max-width: 1200px;
-      --gutter: 20px;
-      --bg: #ffffff;
-      --dark-bg: #0f1720;
-      --muted: #6b7280;
-      --accent: #0b74de;
-      --card-shadow: 0 6px 18px rgba(12,14,20,0.08);
-      --radius: 8px;
-      --text: #111827;
-      --heading: #0b1726;
-      box-sizing: border-box;
-    }
-    *,*::before,*::after{box-sizing:inherit}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.45;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding: 24px;
-      display:flex;
-      justify-content:center;
-    }
-
-    /* Layout container */
-    .container{
-      width:100%;
-      max-width:var(--max-width);
-      margin:0 auto;
-      padding-left:var(--gutter);
-      padding-right:var(--gutter);
-    }
-
-    .row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:24px;
-      margin-bottom:24px;
-    }
-
-    /* grid helpers */
-    /* CORRECCIÓN: Añadido min-width: 0 para evitar desbordamiento en flex */
-    .col-12{flex:1 1 100%; min-width: 0;}
-    .col-6{flex:1 1 calc(50% - 12px); min-width: 0;}
-    .col-4{flex:1 1 calc(33.333% - 16px); min-width: 0;}
-    
-    .text-center{text-align:center}
-    .oe_dark{background:linear-gradient(180deg,#0b1220 0,#0f1720 100%); color:#e6eefc; padding:32px; border-radius:12px;}
-    .card{background:#fff; border-radius:var(--radius); box-shadow:var(--card-shadow); overflow:hidden;}
-    .card .card-body{padding:16px}
-
-    /* header area */
-    .hero{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      padding:20px;
-      border-radius:8px;
-      background:transparent;
-    }
-
-    .logo{max-width:220px; width:30%; height:auto; display:block}
-    .hero .heading{
-      flex:1;
-      min-width:0;
-    }
-    .slogan{
-      margin:0 0 6px 0;
-      color:var(--heading);
-      font-weight:600;
-      font-size:1.1rem;
-      line-height:1.15;
-    }
-    .sub{
-      margin:0 0 8px 0;
-      font-weight:500;
-      color:var(--muted);
-      font-size:0.98rem;
-    }
-    .muted{color:var(--muted); font-size:0.95rem}
-
-    /* features */
-    .features{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:20px;
-      align-items:start;
-    }
-    .features ul{margin:0; padding-left:1.1rem}
-    .features li{margin-bottom:0.6rem; color:inherit}
-
-    /* demos */
-    .screenshot{
-      border:1px solid #e6e9ef;
-      border-radius:8px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:var(--card-shadow);
-    }
-    /* CORRECCIÓN: Imagen adaptativa, evita que se estire más de su tamaño real */
-    .screenshot img{
-      display:block;
-      max-width: 100%;
-      width: auto;
-      height: auto;
-      margin: 0 auto;
-    }
-    .screenshot .caption{padding:10px; background:#fafafa; border-top:1px solid #eee; color:var(--muted); font-size:0.95rem}
-
-    /* usage image */
-    /* CORRECCIÓN: Control de desbordamiento para la imagen de uso */
-    .usage-img{
-      max-width:100%;
-      width: auto;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-      border-radius: 8px
-    }
-
-    /* typography/spacers */
-    h2,h3,h4{margin:0 0 8px 0}
-    p{margin:0 0 12px 0}
-    .mt-32{margin-top:32px}
-    ol{padding-left:1.2rem}
-
-    footer{margin-top:28px; font-size:0.95rem; color:var(--muted); text-align:center}
-
-    /* responsiveness */
-    @media (max-width: 900px){
-      .features{grid-template-columns:1fr}
-      .hero{flex-direction:column; align-items:flex-start}
-      .logo{width:100%; max-width:320px}
-      .col-6{flex:1 1 100%}
-    }
-
-    @media (max-width: 600px){
-      body{padding:14px}
-      .slogan{font-size:1rem}
-      .sub{font-size:0.95rem}
-      .logo{max-width:280px}
-      .container{padding-left:12px; padding-right:12px}
-      .usage-img{max-width:100%}
-    }
-
-    /* small utility */
-    .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:#eef6ff; color:var(--accent); font-weight:600; font-size:0.85rem}
-  </style>
-</head>
-<body>
-  <main class="container" role="main">
-
-    <section class="row card hero" aria-labelledby="intro-title">
-      <img class="logo" src="logo.png" alt="Pridecta logo">
-      <div class="heading">
-        <h2 id="intro-title" class="slogan">User & Company Default Analytic Account</h2>
-        <h3 class="sub">Automate Analytic Distribution in Odoo 18</h3>
-        <div class="muted">For Odoo 18 Community &amp; Enterprise</div>
-        <div class="text-center mt-32">
-          <p>Streamline your accounting workflow by automatically assigning analytic accounts to invoice lines based on User or Company defaults. Includes a powerful mass-update feature directly on the invoice.</p>
+<section class="oe_container">
+    <div class="row oe_spaced">
+        <div class="col-12">
+            <img class="logo img-fluid" src="logo.png" alt="Pridecta logo" style="max-width: 500px; width: 100%; height: auto; display: block; margin: 0 auto;"/>
+            
+            <h2 class="oe_slogan text-center">User & Company Default Analytic Account</h2>
+            <h3 class="oe_slogan text-center">Automate Analytic Distribution in Odoo 18</h3>
+            
+            <div class="text-center">Author: Esteban Viniegra Pérez Olagaray – <a href="mailto:esteban@eviniegra.software">esteban@eviniegra.software</a></div>
+            <div class="text-center">For Odoo 18 Community & Enterprise</div>
+            
+            <div class="text-center">
+                <p class="oe_mt32">
+                    Streamline your accounting workflow by automatically assigning analytic accounts to invoice lines based on User or Company defaults. Includes a powerful mass-update feature directly on the invoice.
+                </p>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <section class="row" aria-labelledby="features-title" style="margin-top:18px">
-      <div class="col-12 card" style="padding:20px;">
-        <h3 id="features-title" class="slogan">Key Features</h3>
-
-        <div class="features mt-32" role="list">
-          <div>
-            <ul>
-              <li><strong>User-Level Defaults:</strong> Assign a specific analytic account to each user (e.g., for salespeople or department heads).</li>
-              <li><strong>Company-Level Defaults:</strong> Set a fallback analytic account for the entire company.</li>
-              <li><strong>Smart Priority Logic:</strong> The system automatically selects the best account based on a hierarchy: <em>Invoice Header &gt; Company &gt; User</em>.</li>
-            </ul>
-          </div>
-
-          <div>
-            <ul>
-              <li><strong>Mass Update Tool:</strong> Use the "General Analytic Account" field on the invoice header to force a specific account onto all lines instantly.</li>
-              <li><strong>Fallback Mechanism:</strong> If you remove the General Account, lines automatically revert to their default Company or User settings.</li>
-              <li><strong>Odoo 18 Ready:</strong> Fully compatible with the new JSON-based <code>analytic_distribution</code> field.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="row" aria-labelledby="config-title" style="margin-top:18px">
-      <div class="col-12">
-        <h3 id="config-title" class="slogan">Configuration</h3>
-      </div>
-
-      <div class="col-6">
-        <div class="screenshot">
-          <div class="card-body">
-            <h4>1. User Configuration</h4>
-            <p>Go to <strong>Settings &gt; Users &amp; Companies &gt; Users</strong>. Open a user, go to the <strong>Access Rights</strong> tab, and find the <strong>Multi Companies</strong> section.</p>
-          </div>
-          <img src="user_config.png" alt="User configuration screenshot">
-          <div class="caption">Define the specific analytic account for this user.</div>
-        </div>
-      </div>
-
-      <div class="col-6">
-        <div class="screenshot">
-          <div class="card-body">
-            <h4>2. Company Configuration</h4>
-            <p>Go to <strong>Settings &gt; Users &amp; Companies &gt; Companies</strong>. Open your company form. Check the <strong>General Information</strong> tab.</p>
-          </div>
-          <img src="company_config.png" alt="Company configuration screenshot">
-          <div class="caption">Set a fallback account if the user doesn't have one.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="row card" style="margin-top:18px; padding:18px;" aria-labelledby="usage-title">
-      <div class="col-12">
-        <h3 id="usage-title" class="slogan">Usage Workflow</h3>
-        <p class="mt-32">When creating an invoice, the system auto-fills the analytic distribution. You can also override everything using the header field.</p>
-
-        <div class="text-center" style="margin:18px 0;">
-          <img src="invoice_usage.png" alt="Invoice usage" class="usage-img">
-        </div>
-
-        <div>
-          <ol>
-            <li><strong>Automatic Assignment:</strong> As you add invoice lines, the system checks if a "General Analytic Account" is set on the header. If not, it checks the Company default, then the User default.</li>
-            <li><strong>Mass Editing:</strong> Select an account in the <strong>"General Analytic Account"</strong> field (in the invoice header). All existing lines will be updated immediately.</li>
-            <li><strong>Resetting:</strong> Clear the "General Analytic Account" field to restore the lines to their original defaults (Company or User based).</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section class="row" style="margin-top:18px;">
-      <div class="col-12 card" style="padding:16px;">
-        <h3 class="slogan">Credits</h3>
-        <div class="text-center">
-          <div class="muted">Author: Esteban Viniegra Perez Olagaray — <a href="mailto:esteban@eviniegra.software">esteban@eviniegra.software</a></div>
-          <p>Developed by <strong>Pridecta</strong> for Odoo 18.</p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-    <div class="muted">
-        <div>Support: <a href="mailto:esteban.viniegra@pridecta.com">esteban.viniegra@pridecta.com</a></div>
-        <div>Contact: <a href="mailto:esteban@eviniegra.software">esteban@eviniegra.software</a></div>
     </div>
-    </footer>
+</section>
 
-  </main>
-</body>
-</html>
+<section class="oe_container oe_dark">
+    <div class="row oe_spaced">
+        <div class="col-12">
+            <h3 class="oe_slogan text-center">Key Features</h3>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <ul>
+                <li><strong>User-Level Defaults:</strong> Assign a specific analytic account to each user (e.g., for salespeople or department heads).</li>
+                <li><strong>Company-Level Defaults:</strong> Set a fallback analytic account for the entire company.</li>
+                <li><strong>Smart Priority Logic:</strong> The system automatically selects the best account based on a hierarchy: <em>Invoice Header > Company > User</em>.</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <ul>
+                <li><strong>Mass Update Tool:</strong> Use the "General Analytic Account" field on the invoice header to force a specific account onto all lines instantly.</li>
+                <li><strong>Fallback Mechanism:</strong> If you remove the General Account, lines automatically revert to their default Company or User settings.</li>
+                <li><strong>Odoo 18 Ready:</strong> Fully compatible with the new JSON-based <code>analytic_distribution</code> field.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="row oe_spaced">
+        <div class="col-12">
+            <h3 class="oe_slogan text-center">Configuration</h3>
+        </div>
+        
+        <div class="col-md-6 col-sm-12 mt-3">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <h4>1. User Configuration</h4>
+                <p>Go to <strong>Settings &gt; Users & Companies &gt; Users</strong>.</p>
+                <p>Open a user, go to the <strong>Access Rights</strong> tab, and find the <strong>Multi Companies</strong> section.</p>
+                <br/>
+                
+                <div style="border: 1px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5px; overflow: hidden;">
+                    <img src="user_config.png" class="img-fluid" style="width: 100%; display: block;">
+                    <div style="padding: 10px; background-color: #f9f9f9; border-top: 1px solid #eee;">
+                        <p class="text-muted" style="margin: 0;"><em>Define the specific analytic account for this user.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12 mt-3">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <h4>2. Company Configuration</h4>
+                <p>Go to <strong>Settings &gt; Users & Companies &gt; Companies</strong>.</p>
+                <p>Open your company form. Check the <strong>General Information</strong> tab.</p>
+                <br/>
+                
+                <div style="border: 1px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5px; overflow: hidden;">
+                    <img src="company_config.png" class="img-fluid" style="width: 100%; display: block;">
+                    <div style="padding: 10px; background-color: #f9f9f9; border-top: 1px solid #eee;">
+                        <p class="text-muted" style="margin: 0;"><em>Set a fallback account if the user doesn't have one.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark" style="margin-top:20px;">
+    <div class="row oe_spaced">
+        <div class="col-12">
+            <h3 class="oe_slogan text-center">Usage Workflow</h3>
+            <p class="oe_mt32 text-center">
+                When creating an invoice, the system auto-fills the analytic distribution. You can also override everything using the header field.
+            </p>
+            <div class="oe_row_img oe_centered" style="text-align: center;">
+                <img src="invoice_usage.png" class="img-thumbnail img-fluid" style="max-width: 100%; height: auto; margin: 20px auto; border: 1px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+            </div>
+            <div class="mt-4">
+                <ol>
+                    <li><strong>Automatic Assignment:</strong> As you add invoice lines, the system checks if a "General Analytic Account" is set on the header. If not, it checks the Company default, then the User default.</li>
+                    <li><strong>Mass Editing:</strong> Select an account in the <strong>"General Analytic Account"</strong> field (in the invoice header). All existing lines will be updated immediately.</li>
+                    <li><strong>Resetting:</strong> Clear the "General Analytic Account" field to restore the lines to their original defaults (Company or User based).</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="row oe_spaced">
+        <div class="col-12">
+            <h3 class="oe_slogan text-center">Credits</h3>
+            <div class="text-center">
+                <p>Developed by <strong>Pridecta</strong> for Odoo 18.</p>
+            </div>
+        </div>
+    </div>
+</section>
