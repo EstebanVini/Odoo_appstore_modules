@@ -61,4 +61,4 @@ Inside an Invoice (Customer or Vendor), you will see a new field on the right si
 
 ## Author
 
-Developed by **Pridecta** for Odoo 18.
+Developed by **Eviniegra Software** for Odoo 18.
